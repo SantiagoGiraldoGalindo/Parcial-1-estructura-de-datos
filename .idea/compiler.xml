@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Parcial_1" />
         <module name="Parcial-1-estructura-de-datos" />
       </profile>
     </annotationProcessing>
