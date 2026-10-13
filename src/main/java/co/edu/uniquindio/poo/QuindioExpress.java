@@ -54,6 +54,44 @@ public class QuindioExpress {
   }
  }
 
- // (Aquí puedes dejar tus getters y setters de las listas si los necesitas)
+ public Paquete obtenerPaqueteMayorPeso() {
+  if (mapaBusquedaRapida.isEmpty()) {
+   System.out.println("No hay paquetes registrados.");
+   return null;
+  }
+
+  // Convertimos los valores del mapa a una Lista para acceder por índices
+  List<Paquete> listaPaquetes = new ArrayList<>(mapaBusquedaRapida.values());
+
+  return encontrarMayorDivideYVenceras(listaPaquetes, 0, listaPaquetes.size() - 1);
+ }
+
+ private Paquete encontrarMayorDivideYVenceras(List<Paquete> paquetes, int inicio, int fin) {
+
+ 
+  if (inicio == fin) {
+   return paquetes.get(inicio);
+  }
+
+
+  int mitad = (inicio + fin) / 2;
+
+
+  Paquete paqueteIzquierdo = encontrarMayorDivideYVenceras(paquetes, inicio, mitad);
+
+
+  Paquete paqueteDerecho = encontrarMayorDivideYVenceras(paquetes, mitad + 1, fin);
+
+
+  Paquete resultadoFinal;
+  if (paqueteIzquierdo.getPeso() > paqueteDerecho.getPeso()) {
+   resultadoFinal = paqueteIzquierdo;
+  } else {
+   resultadoFinal = paqueteDerecho;
+  }
+
+
+  return resultadoFinal;
+ }
 }
 
