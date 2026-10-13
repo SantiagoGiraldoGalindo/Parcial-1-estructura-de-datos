@@ -4,7 +4,7 @@ import java.util.*;
 
 public class QuindioExpress {
 
- // 1. Declaración correcta de las colecciones
+ 
  private Queue<Paquete> listaOrdenLlegada;
  private Map<String, Paquete> mapaBusquedaRapida; // Llave: String (código), Valor: Paquete
  private Set<String> municipiosOrdenados;         // Guarda solo los nombres (Strings)
@@ -68,7 +68,7 @@ public class QuindioExpress {
 
  private Paquete encontrarMayorDivideYVenceras(List<Paquete> paquetes, int inicio, int fin) {
 
- 
+
   if (inicio == fin) {
    return paquetes.get(inicio);
   }
