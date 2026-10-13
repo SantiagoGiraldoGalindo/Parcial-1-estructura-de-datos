@@ -6,14 +6,14 @@ public class Repartidor {
     private String zona;
     private int identificacion;
     private boolean disponible;
-    private Paquete paquete;
+    private Paquete paqueteActual;
 
     public Repartidor( String nombre, String zona, int identificacion, boolean disponible, Paquete paquete ) {
         this.nombre = nombre;
         this.zona = zona;
         this.identificacion = identificacion;
         this.disponible = disponible;
-        this.paquete = paquete;
+        this.paqueteActual = null;
 
     }
 
@@ -50,10 +50,10 @@ public class Repartidor {
     }
 
     public Paquete getPaquete() {
-        return paquete;
+        return paqueteActual;
     }
 
     public void setPaquete(Paquete paquete) {
-        this.paquete = paquete;
+        this.paqueteActual = paquete;
     }
 }
